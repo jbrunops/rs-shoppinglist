@@ -1,3 +1,15 @@
 ul[role="list"]{
   list-style: none;
 }
+
+.deletar{
+  display: none;
+}
+
+.esconder-mobile{
+  display: none;
+}
+
+.show-exc{
+  display: flex;
+}

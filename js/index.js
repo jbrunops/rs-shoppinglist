@@ -34,4 +34,42 @@ const addNewItem = () =>{
   ul.append(li);
 
   input.value = "";
+
+  del.addEventListener("click", () =>{
+    const circle = document.createElement("small");
+    circle.innerHTML = `<img src="./icons/warning-circle-filled.svg" alt="">`;
+    div.prepend(circle);
+    checkbox.remove("button");
+
+    const btn = document.createElement("button");
+    btn.innerHTML = `<img src="./icons/delete-small.svg" alt="">`;
+    
+    li.append(btn)
+    span.textContent = "O item foi removido da lista"
+    li.classList.replace("item", "alert")
+
+
+    btn.addEventListener("click", () => {
+     li.classList.replace("alert", "delet")
+ })
+
+}) 
+
+}
+
+input.addEventListener("change", () => {
+ const inputIsValid = validateInput()
+ if(inputIsValid) {
+     input.content == ""
+     input.classList.remove("danger")
+     error.classList.replace("error", "delet")
+     return
+ }
+})
+
+button.addEventListener("click", () => addNewItem()) 
+
+form.onsubmit = (event) => {
+ event.preventDefault()
+
 }

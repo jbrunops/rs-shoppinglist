@@ -139,9 +139,9 @@ form {
       border-radius: 0.35rem;
       transition: border-color 300ms ease;
 
-      &:hover[
+      &:hover{
         border-color: var(--bd-hover);
-      ]
+      }
 
       &:checked{
         background: url(./icons/state=selected.svg);
